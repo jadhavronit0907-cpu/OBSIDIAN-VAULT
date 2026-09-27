@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OBSIDIAN VAULT — Dark Fits. Bold Energy.</title>
+<meta name="description" content="OBSIDIAN VAULT Drop 001 — dark fits. bold energy.">
+<style>
+:root{--bg:#050505;--card:#0d0d0d;--soft:#151515;--line:#242424;--text:#f2f2ee;--muted:#8b8b87}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;letter-spacing:-.02em}button,input{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.nav{height:72px;position:fixed;inset:0 0 auto;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;background:rgba(5,5,5,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.logo{font-weight:900;letter-spacing:.14em;font-size:17px}.links{display:flex;gap:28px;text-transform:uppercase;font-size:10px;letter-spacing:.18em;color:#aaa}.links a:hover{color:#fff}.navright{display:flex;align-items:center;gap:18px;font-size:10px;text-transform:uppercase;letter-spacing:.15em}.bag{border:0;background:none;color:#fff}.hamb{display:none;border:0;background:none;color:#fff;font-size:20px}.links.open{display:flex}
+.hero{min-height:94vh;padding:72px 5vw 70px;display:flex;align-items:end;position:relative;overflow:hidden;background:radial-gradient(circle at 73% 40%,#363632 0,#151513 22%,transparent 46%),linear-gradient(120deg,#050505,#10100e 65%,#050505)}
+.hero:after{content:"OV";position:absolute;right:-5vw;top:10vh;font-size:min(52vw,650px);font-weight:900;line-height:1;color:#0d0d0b;letter-spacing:-.12em;transform:rotate(10deg)}
+.hero>*{position:relative;z-index:2}.eyebrow,.kicker{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8a8a86}.hero h1{font-size:clamp(72px,13vw,185px);line-height:.78;letter-spacing:-.09em;margin:22px 0}.hero h1 span{color:#999}.hero p{max-width:430px;color:#999;font-size:13px;line-height:1.7}.btn{display:inline-flex;align-items:center;justify-content:center;gap:22px;margin-top:28px;padding:16px 22px;background:#eee;color:#050505;border:1px solid #eee;text-transform:uppercase;letter-spacing:.17em;font-size:10px;font-weight:800}.btn{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}.btn:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 35px #000}.product{transition:transform .25s ease,border-color .25s ease}.product:hover{transform:translateY(-6px);border-color:#3a3a36}.pic .shirt{transition:transform .45s cubic-bezier(.2,.7,.2,1)}.product:hover .pic .shirt{transform:scale(1.06) translateY(-4px)}
+.strip{display:flex;justify-content:space-between;gap:20px;padding:13px 5vw;border-block:1px solid var(--line);color:#777;text-transform:uppercase;font-size:8px;letter-spacing:.2em;overflow:hidden}
+.section{padding:90px 5vw}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:34px}.section h2{font-size:clamp(38px,6vw,78px);line-height:.9;letter-spacing:-.07em;margin:8px 0}.view{font-size:9px;text-transform:uppercase;letter-spacing:.17em;border-bottom:1px solid #555;padding-bottom:6px}
+.controls{display:flex;gap:8px;margin-bottom:18px}.filter,.search{background:#0b0b0b;border:1px solid #222;color:#aaa;padding:11px 13px;font-size:9px;text-transform:uppercase;letter-spacing:.12em}.search{margin-left:auto;width:230px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.product{background:var(--card);border:1px solid #171717}.pic{aspect-ratio:4/5;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 28%,#363633,#111 52%,#070707)}.pic .shirt{width:48%;height:61%;background:#161616;border:1px solid #30302e;position:relative;box-shadow:0 35px 60px #000}.pic .shirt:after{content:attr(data-mark);position:absolute;inset:43% 0 auto;text-align:center;font-weight:900;font-size:22px;color:#aaa;letter-spacing:.08em}.product:nth-child(2) .pic{background:radial-gradient(circle at 45% 30%,#2c2c29,#0b0b0b 65%)}.product:nth-child(3) .pic{background:radial-gradient(circle at 58% 35%,#454541,#10100f 56%)}.product:nth-child(4) .pic{background:radial-gradient(circle at 50% 30%,#252522,#080808 65%)}.tag{position:absolute;top:13px;left:13px;background:#eee;color:#080808;padding:6px 8px;font-size:8px;font-weight:800;letter-spacing:.12em}.pinfo{padding:16px}.pname{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.sub{font-size:10px;color:#666;margin-top:6px}.prow{display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:11px}.quick{width:100%;margin-top:14px;background:none;color:#ddd;border:1px solid #333;padding:11px;text-transform:uppercase;font-size:9px;letter-spacing:.14em}.quick:hover{background:#eee;color:#050505}
+.manifesto{padding:130px 5vw;text-align:center;border-block:1px solid var(--line);background:#090909}.manifesto h2{font-size:clamp(45px,8vw,110px);line-height:.87;letter-spacing:-.08em;margin:18px 0}.manifesto p{max-width:570px;margin:auto;color:#777;font-size:13px;line-height:1.8}
+.editorial{display:grid;grid-template-columns:1.25fr .75fr;min-height:720px}.visual{background:linear-gradient(145deg,#292926,#0a0a09);position:relative;overflow:hidden}.visual:before{content:"OBSIDIAN VAULT";position:absolute;white-space:nowrap;font-size:clamp(90px,15vw,230px);font-weight:900;letter-spacing:-.1em;left:-8%;top:42%;transform:rotate(-9deg);color:#151513}.copy{padding:9vw 7vw;display:flex;justify-content:center;flex-direction:column;background:#0a0a0a}.copy h2{font-size:clamp(45px,6vw,85px);line-height:.86;letter-spacing:-.08em;margin:18px 0}.copy p{font-size:13px;line-height:1.8;color:#777;max-width:410px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.info div{padding:35px 5vw;border-right:1px solid var(--line)}.info div:last-child{border:0}.info strong{font-size:10px;letter-spacing:.17em;text-transform:uppercase}.info p{font-size:11px;color:#777;line-height:1.7}
+.faq{max-width:850px;margin:auto}.faq details{border-top:1px solid #222;padding:20px 0}.faq details:last-child{border-bottom:1px solid #222}.faq summary{cursor:pointer;list-style:none;font-size:12px;text-transform:uppercase;letter-spacing:.1em}.faq summary::-webkit-details-marker{display:none}.faq p{color:#777;font-size:12px;line-height:1.7;max-width:700px}
+.news{padding:90px 5vw;text-align:center;border-top:1px solid var(--line)}.news h2{font-size:clamp(38px,6vw,76px);letter-spacing:-.07em;margin:12px}.news p{color:#777;font-size:12px}.form{max-width:500px;margin:28px auto 0;border-bottom:1px solid #444;display:flex}.form input{flex:1;background:none;border:0;outline:0;color:#fff;padding:14px 4px;font-size:10px;letter-spacing:.1em}.form button{background:none;border:0;color:#fff;font-size:9px;text-transform:uppercase;letter-spacing:.15em;font-weight:800}
+footer{padding:55px 5vw 25px;border-top:1px solid var(--line);display:grid;grid-template-columns:2fr repeat(3,1fr);gap:30px}footer .brand{font-weight:900;letter-spacing:.13em;font-size:19px}footer p,footer a{font-size:10px;color:#666;line-height:1.7}footer h4{font-size:9px;color:#666;text-transform:uppercase;letter-spacing:.18em;margin:0 0 13px}footer a{display:block;margin:8px 0}.copyright{grid-column:1/-1;border-top:1px solid #1c1c1c;padding-top:20px;text-transform:uppercase;letter-spacing:.14em;font-size:8px;color:#444}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:30;opacity:0;pointer-events:none;transition:.25s}.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;right:-480px;top:0;width:min(480px,100%);height:100vh;background:#0a0a0a;z-index:40;border-left:1px solid #2a2a2a;transition:.3s;display:flex;flex-direction:column;padding:26px}.drawer.open{right:0}.drawerhead{display:flex;justify-content:space-between;border-bottom:1px solid #222;padding-bottom:20px;font-size:11px;letter-spacing:.14em}.x{background:none;border:0;color:#aaa;font-size:20px}.cartitems{flex:1;overflow:auto;padding:15px 0}.cartitem{display:grid;grid-template-columns:80px 1fr auto;gap:13px;padding:15px 0;border-bottom:1px solid #1e1e1e}.mini{background:radial-gradient(circle,#292926,#080808);height:90px}.cartitem h4{font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin:4px 0}.cartitem p{font-size:9px;color:#666}.qty{display:flex;align-items:center;gap:8px;margin-top:10px}.qty button{background:#161616;border:1px solid #292929;color:#aaa;width:24px;height:24px}.remove{background:none;border:0;color:#666;font-size:9px}.cartfoot{border-top:1px solid #222;padding-top:18px}.total{display:flex;justify-content:space-between;font-size:12px;margin-bottom:14px}.full{width:100%;margin:0}.empty{text-align:center;color:#666;padding:80px 0;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
+.modal{position:fixed;z-index:50;left:50%;top:50%;transform:translate(-50%,-47%);width:min(920px,92vw);max-height:90vh;overflow:auto;background:#0b0b0b;border:1px solid #292929;opacity:0;pointer-events:none;transition:.25s}.modal.show{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}.modalhead{display:flex;justify-content:space-between;padding:18px 22px;border-bottom:1px solid #222}.modalbody{display:grid;grid-template-columns:1fr 1fr}.modalvisual{min-height:530px;background:radial-gradient(circle at 50% 30%,#383834,#0b0b0b 62%);display:grid;place-items:center}.modalshirt{width:48%;height:65%;background:#151515;border:1px solid #30302e;box-shadow:0 40px 70px #000;position:relative}.modalshirt:after{content:"OV";position:absolute;top:43%;left:0;width:100%;text-align:center;font-weight:900;font-size:30px;color:#aaa}.details{padding:40px}.details h2{font-size:40px;line-height:.95;letter-spacing:-.06em;margin:8px 0 14px}.details .pricebig{font-size:16px}.details .desc{font-size:12px;color:#777;line-height:1.8;margin:20px 0}.label{font-size:8px;text-transform:uppercase;letter-spacing:.17em;color:#777;margin:20px 0 9px}.sizes{display:flex;gap:7px}.sizes button{width:45px;height:38px;background:#0d0d0d;border:1px solid #333;color:#aaa}.sizes button.active,.sizes button:hover{background:#eee;color:#050505;border-color:#eee}.add{width:100%;margin-top:20px}.note{font-size:9px;color:#555;line-height:1.6;margin-top:14px}
+.checkout{display:none}.checkout.show{display:block}.checkoutgrid{display:grid;grid-template-columns:1.2fr .8fr}.checkoutform{padding:28px}.checkoutform h3,.summary h3{font-size:12px;text-transform:uppercase;letter-spacing:.13em;margin:0 0 18px}.field{margin:10px 0}.field label{display:block;font-size:8px;color:#666;text-transform:uppercase;letter-spacing:.15em;margin-bottom:6px}.field input,.field select{width:100%;background:#101010;border:1px solid #2a2a2a;color:#ddd;padding:12px;font-size:11px;outline:0}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.summary{border-left:1px solid #222;padding:28px}.summaryline{display:flex;justify-content:space-between;font-size:10px;padding:10px 0;border-bottom:1px solid #1e1e1e;color:#aaa}.pay{width:100%;margin-top:18px}.success{padding:80px 30px;text-align:center}.success h2{font-size:45px;letter-spacing:-.06em}.success p{color:#777;font-size:12px;line-height:1.7}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);z-index:80;background:#eee;color:#050505;padding:12px 17px;font-size:9px;text-transform:uppercase;letter-spacing:.12em;opacity:0;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.links{display:none}.hamb{display:block}.navright .searchlink{display:none}.hero{min-height:82vh;padding-bottom:60px}.grid{grid-template-columns:repeat(2,1fr)}.search{width:150px}.editorial{grid-template-columns:1fr}.visual{min-height:50vh}.info{grid-template-columns:1fr}.info div{border-right:0;border-bottom:1px solid var(--line)}footer{grid-template-columns:1fr 1fr}.brandcol{grid-column:1/-1}.modalbody,.checkoutgrid{grid-template-columns:1fr}.modalvisual{min-height:360px}.summary{border-left:0;border-top:1px solid #222}.details{padding:28px}}
+@media(max-width:520px){.grid{gap:6px}.pinfo{padding:12px}.controls{flex-wrap:wrap}.search{margin-left:0;width:100%}.strip span:nth-child(n+3){display:none}.hero h1{font-size:74px}.section{padding:70px 5vw}.modal{width:96vw}.modalvisual{min-height:300px}.details h2{font-size:34px}footer{grid-template-columns:1fr}.brandcol{grid-column:auto}.copyright{grid-column:auto}}
+</style>
+</head>
+<body>
+<header class="nav">
+<a class="logo" href="#">OBSIDIAN VAULT</a>
+<nav class="links"><a href="#shop">Shop</a><a href="#drop">Drop 001</a><a href="#about">About</a><a href="#faq">Support</a></nav>
+<div class="navright"><a class="searchlink" href="#shop">Search</a><button class="bag" id="bagBtn" aria-label="Open shopping bag">Bag (0)</button><button class="hamb" id="hamb" aria-label="Open menu">☰</button></div>
+</header>
+
+<section class="hero">
+<div><div class="eyebrow">OBSIDIAN VAULT / DROP 001</div><h1>DARK<br><span>FITS.</span></h1><p>Dark silhouettes. Heavyweight essentials. A new uniform for the night.</p><div class="eyebrow" style="margin-top:18px">DROP 001 / FOUR PIECES</div><a class="btn" href="#shop">Shop Drop 001 <span>↗</span></a></div>
+</section>
+<div class="strip"><span>Free shipping over ₹2,999</span><span>Secure checkout</span><span>Heavyweight essentials</span><span>Drop 001 / The Origin</span></div>
+
+<section class="section" id="shop">
+<div class="sectionhead"><div><div class="kicker">The first statement</div><h2>SHOP DROP 001</h2></div><span class="view">4 pieces / limited drop</span></div>
+<div class="controls"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="tee">T-Shirts</button><button class="filter" data-filter="hoodie">Hoodies</button><input class="search" id="search" placeholder="SEARCH PRODUCTS"></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section class="manifesto" id="about"><div class="kicker">The OBSIDIAN VAULT code</div><h2>NO NOISE.<br>JUST PRESENCE.</h2><p>OBSIDIAN VAULT was created around a simple idea — clothing should carry presence. Dark tones, strong silhouettes and details that don't ask for attention.</p></section>
+
+<section class="editorial" id="drop"><div class="visual"></div><div class="copy"><div class="kicker">Drop 001 / The Origin</div><h2>BUILT<br>AFTER<br>DARK.</h2><p>Our first collection introduces the visual language of OBSIDIAN VAULT: heavyweight fabrics, restrained graphics and a silhouette designed for everyday confidence.</p><a class="btn" href="#shop">Explore the drop ↗</a></div></section>
+
+<section class="info"><div><strong>Heavyweight feel</strong><p>Fabric, fit and care details are shown on every product page.</p></div><div><strong>Size guidance</strong><p>Use the size selector on each product page. Add your final measurement chart before launch.</p></div><div><strong>Delivery</strong><p>Shipping details, dispatch times and delivery estimates will appear at checkout.</p></div></section>
+
+<section class="section" id="faq"><div class="sectionhead"><div><div class="kicker">Need to know</div><h2>SUPPORT</h2></div></div><div class="faq">
+<details open><summary>How does the fit work?</summary><p>Drop 001 uses an oversized / relaxed direction. Use the size selector and your final production measurement chart to choose the intended fit.</p></details>
+<details><summary>What is the shipping policy?</summary><p>Shipping information will be published here before orders open, including delivery regions and dispatch times.</p></details>
+<details><summary>Can I return or exchange an item?</summary><p>Our final return and exchange policy will be published here before orders open.</p></details>
+<details><summary>Is checkout live?</summary><p>Checkout is currently a preview. Orders and payments will be enabled once the store is connected to a payment and fulfilment system.</p></details>
+</div></section>
+
+<section class="news"><div class="kicker">Private access</div><h2>ENTER THE WORLD.</h2><p>Get first access to future drops and OBSIDIAN VAULT releases.</p><form class="form" id="newsletter"><input type="email" placeholder="YOUR EMAIL ADDRESS" required><button>Join →</button></form></section>
+
+<footer><div class="brandcol"><div class="brand">OBSIDIAN VAULT</div><p>DARK FITS. BOLD ENERGY.<br>Independent fashion label.</p></div><div><h4>Shop</h4><a href="#shop">All products</a><a href="#drop">Drop 001</a></div><div><h4>Support</h4><a href="#faq">Size guide</a><a href="#faq">Shipping</a><a href="#faq">Returns</a></div><div><h4>Connect</h4><a href="#">Instagram</a><a href="mailto:hello@obsidianvault.com">Contact</a></div><div class="copyright">© 2026 OBSIDIAN VAULT. OBSIDIAN VAULT / DROP 001 — COMING SOON</div></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer"><div class="drawerhead"><strong>YOUR BAG</strong><button class="x" onclick="closePanels()">×</button></div><div class="cartitems" id="cartitems"></div><div class="cartfoot"><div class="total"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><button class="btn full" id="checkoutBtn">Proceed to checkout →</button></div></aside>
+
+<div class="modal" id="productModal"><div class="modalhead"><span>PRODUCT</span><button class="x" onclick="closePanels()">×</button></div><div class="modalbody"><div class="modalvisual"><div class="modalshirt"></div></div><div class="details"><div class="kicker" id="modalCode"></div><h2 id="modalName"></h2><div class="pricebig" id="modalPrice"></div><p class="desc" id="modalDesc"></p><div class="label">Size</div><div class="sizes" id="sizes"></div><button class="btn add" id="addBtn">Add to bag →</button><p class="note">Checkout preview — live payments are not enabled yet.</p></div></div></div>
+
+<div class="modal checkout" id="checkoutModal"><div class="modalhead"><span>CHECKOUT</span><button class="x" onclick="closePanels()">×</button></div><div class="checkoutgrid"><form class="checkoutform" id="checkoutForm"><h3>Contact & delivery</h3><div class="field"><label>Email</label><input type="email" required placeholder="you@example.com"></div><div class="field"><label>Full name</label><input required placeholder="Your name"></div><div class="field"><label>Address</label><input required placeholder="Street address"></div><div class="row"><div class="field"><label>City</label><input required></div><div class="field"><label>PIN code</label><input required inputmode="numeric"></div></div><div class="field"><label>Payment</label><select><option>Demo payment — not live</option><option>UPI (connect provider)</option><option>Card (connect provider)</option></select></div><button class="btn pay">Place preview order →</button></form><div class="summary"><h3>Order summary</h3><div id="checkoutSummary"></div></div></div></div>
+
+<div class="modal checkout" id="successModal"><div class="success"><div class="kicker">OBSIDIAN VAULT</div><h2>ORDER RECEIVED.</h2><p>Preview order confirmation. No payment has been collected and no shipment has been created.</p><button class="btn" onclick="closePanels()">Continue shopping →</button></div></div>
+<div class="toast" id="toast">Added to bag</div>
+
+<script>
+const products=[
+{id:1,code:'OV-001 / THE ORIGIN',name:'The Origin',type:'tee',price:1499,sub:'Heavyweight oversized tee',desc:'A foundational OBSIDIAN VAULT silhouette in a dark heavyweight build. Clean front, restrained identity.'},
+{id:2,code:'OV-002 / AFTER DARK',name:'After Dark',type:'tee',price:1699,sub:'Signature graphic tee',desc:'The signature Drop 001 graphic piece. Relaxed shape with a minimal ZV statement.'},
+{id:3,code:'OV-003 / SHADOW',name:'Shadow',type:'tee',price:1799,sub:'Boxy heavyweight tee',desc:'A structured boxy tee designed around a sharper everyday silhouette.'},
+{id:4,code:'OV-004 / NOCTURNE',name:'Nocturne',type:'hoodie',price:2499,sub:'Premium oversized hoodie',desc:'A heavyweight hoodie with an oversized cut and quiet OBSIDIAN VAULT branding.'}
+];
+let bag=JSON.parse(localStorage.getItem('obsidianVaultBag')||'[]').map(p=>({...p,qty:p.qty||1})), selected=null, size='M';
+const money=n=>'₹'+n.toLocaleString('en-IN');
+const grid=document.getElementById('grid');
+function renderProducts(){
+ const q=document.getElementById('search').value.toLowerCase();
+ const active=document.querySelector('.filter.active').dataset.filter;
+ grid.innerHTML=products.filter(p=>(active==='all'||p.type===active)&&(`${p.name} ${p.sub} ${p.code}`.toLowerCase().includes(q))).map(p=>`
+ <article class="product"><div class="pic">${p.id===4?'<span class="tag">LIMITED</span>':''}<div class="shirt" data-mark="OV"></div></div>
+ <div class="pinfo"><div class="pname">${p.code}</div><div class="sub">${p.sub}</div><div class="prow"><span>${money(p.price)}</span><span>IN STOCK</span></div><button class="quick" onclick="openProduct(${p.id})">View product →</button></div></article>`).join('');
+}
+function openProduct(id){selected=products.find(p=>p.id===id);document.getElementById('modalCode').textContent=selected.code;document.getElementById('modalName').textContent=selected.name;document.getElementById('modalPrice').textContent=money(selected.price);document.getElementById('modalDesc').textContent=selected.desc;size='M';renderSizes();show('productModal')}
+function renderSizes(){document.getElementById('sizes').innerHTML=['S','M','L','XL'].map(s=>`<button class="${s===size?'active':''}" onclick="size='${s}';renderSizes()">${s}</button>`).join('')}
+document.getElementById('addBtn').onclick=()=>{const existing=bag.find(p=>p.id===selected.id&&p.size===size); if(existing) existing.qty=(existing.qty||1)+1; else bag.push({...selected,size,qty:1}); save(); closePanels(); toast(existing?'Quantity updated':'Added to bag')};
+function save(){localStorage.setItem('obsidianVaultBag',JSON.stringify(bag));renderBag()}
+function renderBag(){
+ document.getElementById('bagBtn').textContent=`Bag (${bag.reduce((a,p)=>a+(p.qty||1),0)})`;
+ const el=document.getElementById('cartitems');
+ if(!bag.length){el.innerHTML='<div class="empty">Your bag is empty.</div>';document.getElementById('subtotal').textContent='₹0';return}
+ el.innerHTML=bag.map((p,i)=>`<div class="cartitem"><div class="mini"></div><div><h4>${p.code}</h4><p>Size ${p.size} · ${money(p.price)} each</p><div class="qty"><button onclick="changeQty(${i},-1)">−</button><span>${p.qty||1}</span><button onclick="changeQty(${i},1)">+</button></div></div><button class="remove" onclick="removeItem(${i})">REMOVE</button></div>`).join('');
+ document.getElementById('subtotal').textContent=money(bag.reduce((a,p)=>a+p.price*(p.qty||1),0));
+}
+function changeQty(i,d){bag[i].qty=(bag[i].qty||1)+d;if(bag[i].qty<=0)bag.splice(i,1);save()}
+function removeItem(i){bag.splice(i,1);save()}
+function show(id){document.getElementById('overlay').classList.add('show');document.getElementById(id).classList.add('show')}
+function closePanels(){document.querySelectorAll('.modal,.drawer').forEach(x=>x.classList.remove('show','open'));document.getElementById('overlay').classList.remove('show')}
+document.getElementById('hamb').onclick=()=>document.querySelector('.links').classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>document.querySelector('.links').classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanels()});
+document.getElementById('bagBtn').onclick=()=>{renderBag();document.getElementById('drawer').classList.add('open');document.getElementById('overlay').classList.add('show')};
+document.getElementById('overlay').onclick=closePanels;
+document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderProducts()});
+document.getElementById('search').oninput=renderProducts;
+document.getElementById('checkoutBtn').onclick=()=>{if(!bag.length){toast('Your bag is empty');return}document.getElementById('drawer').classList.remove('open');document.getElementById('checkoutSummary').innerHTML=bag.map(p=>`<div class="summaryline"><span>${p.name} / ${p.size} × ${p.qty||1}</span><span>${money(p.price*(p.qty||1))}</span></div>`).join('')+`<div class="summaryline"><strong>Total</strong><strong>${money(bag.reduce((a,p)=>a+p.price*(p.qty||1),0))}</strong></div>`;show('checkoutModal')};
+document.getElementById('checkoutForm').onsubmit=e=>{e.preventDefault();document.getElementById('checkoutModal').classList.remove('show');document.getElementById('successModal').classList.add('show');bag=[];save()};
+document.getElementById('newsletter').onsubmit=e=>{e.preventDefault();e.target.reset();toast('You’re on the list')};
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1600)}
+renderProducts();renderBag();
+</script>
+</body>
+</html>
